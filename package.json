@@ -1,0 +1,101 @@
+{
+  "name": "@v0idd0/double-text-risk",
+  "version": "0.1.0",
+  "description": "double-text-risk — deterministic follow-up checker for dating, workplace, recruiter, client, support, family, and sales threads that scores whether another message adds value, should wait, switch channels, or stay unsent.",
+  "type": "module",
+  "main": "src/index.js",
+  "bin": {
+    "double-text-risk": "./bin/double-text-risk.js"
+  },
+  "scripts": {
+    "test": "node test.js",
+    "stage:site": "bash ./scripts/stage-site.sh"
+  },
+  "keywords": [
+    "double-text-risk",
+    "double-text",
+    "double-texting",
+    "second-text",
+    "follow-up",
+    "follow-up-checker",
+    "follow-up-timing-checker",
+    "should-i-double-text",
+    "texting",
+    "message-analysis",
+    "mixed-signals",
+    "reply-anxiety",
+    "follow-up-timing",
+    "just-checking-in",
+    "should-i-text",
+    "should-i-follow-up",
+    "no-response",
+    "workplace",
+    "relationships",
+    "dating",
+    "recruiting",
+    "recruiter-follow-up",
+    "interview-follow-up",
+    "client-follow-up",
+    "warm-lead-follow-up",
+    "sales",
+    "customer-support",
+    "account-management",
+    "family-conflict",
+    "cofounder-conflict",
+    "vendor-follow-up",
+    "support-escalation",
+    "channel-shift",
+    "move-to-call",
+    "double-message",
+    "text-twice",
+    "follow-up-anxiety",
+    "client-nudge",
+    "vendor-nudge",
+    "recruiter-follow-up-timing",
+    "sales-follow-up-checker",
+    "support-follow-up",
+    "reconnect-text",
+    "just-checking-in-again",
+    "should-i-send-this-follow-up",
+    "double-texting-after-interview",
+    "client-follow-up-timing",
+    "vendor-follow-up-timing",
+    "recruiter-went-silent",
+    "customer-nudge-checker",
+    "sales-follow-up-timing",
+    "support-thread-follow-up",
+    "one-more-text-checker",
+    "chatgpt-alternative",
+    "gemini-alternative",
+    "ai-relationship-tool",
+    "negotiation",
+    "cli",
+    "voiddo",
+    "tells"
+  ],
+  "author": "vøiddo <support@voiddo.com> (https://voiddo.com)",
+  "license": "MIT",
+  "homepage": "https://tells.voiddo.com/double-text-risk/?ref=double-text-risk-npm",
+  "bugs": {
+    "url": "https://voiddo.com/contact/?ref=double-text-risk-npm-support",
+    "email": "support@voiddo.com"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "files": [
+    "bin",
+    "src",
+    "README.md",
+    "compare-chatgpt-gemini.md",
+    "LICENSE",
+    "from-the-studio.md"
+  ],
+  "funding": {
+    "type": "individual",
+    "url": "https://voiddo.com/contact/"
+  }
+}

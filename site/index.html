@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>double-text-risk - check if your follow-up helps or weakens you</title>
+    <meta
+      name="description"
+      content="Free deterministic follow-up checker for timing, pressure, value, and double-text risk. No API, no signup, no fake certainty."
+    />
+    <meta name="robots" content="index,follow,max-image-preview:large" />
+    <meta name="theme-color" content="#0a1018" />
+    <link rel="canonical" href="https://tells.voiddo.com/double-text-risk/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="double-text-risk - should you send the follow-up?" />
+    <meta
+      property="og:description"
+      content="Run one drafted follow-up through a deterministic timing and pressure check before you send it."
+    />
+    <meta property="og:url" content="https://tells.voiddo.com/double-text-risk/" />
+    <meta property="og:site_name" content="tells by vøiddo" />
+    <meta property="og:image" content="https://tells.voiddo.com/og-card.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="double-text-risk - should you send the follow-up?" />
+    <meta
+      name="twitter:description"
+      content="Deterministic follow-up timing checker for pressure, value, and second-text risk."
+    />
+    <meta name="twitter:image" content="https://tells.voiddo.com/og-card.png" />
+    <link rel="stylesheet" href="./styles.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "double-text-risk",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "Web",
+        "isAccessibleForFree": true,
+        "url": "https://tells.voiddo.com/double-text-risk/",
+        "description": "Free deterministic follow-up checker for timing, pressure, value, and double-text risk.",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        },
+        "creator": {
+          "@type": "Organization",
+          "name": "vøiddo",
+          "url": "https://voiddo.com/"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "vøiddo",
+          "url": "https://voiddo.com/"
+        },
+        "isPartOf": {
+          "@type": "WebSite",
+          "name": "tells",
+          "url": "https://tells.voiddo.com/"
+        },
+        "featureList": [
+          "Deterministic follow-up timing check",
+          "Risk, timing, pressure, value, and channel-shift signals",
+          "Hours-since-last-outbound and prior-follow-up controls",
+          "Upgrade path into tells for thread-level analysis"
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <div class="brand-lockup">
+          <span class="brand-mark">d</span>
+          <div>
+            <p class="eyebrow">vøiddo micro-tool</p>
+            <h1>double-text-risk</h1>
+          </div>
+        </div>
+        <a class="quiet-link" href="https://tells.voiddo.com/signal-toolkit/?ref=double-text-risk-top">see the toolkit</a>
+      </header>
+
+      <main>
+        <section class="hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow">follow-up timing check</p>
+            <h2>See whether the second text adds value or just adds need.</h2>
+            <p class="lede">
+              <code>double-text-risk</code> scores one drafted follow-up against two realities:
+              how long it has been since your last outbound message, and how much pressure versus
+              value the new message adds. It is deterministic, immediate, and deliberately narrow.
+            </p>
+            <div class="hero-points">
+              <span>zero API</span>
+              <span>same draft, same score</span>
+              <span>built for real send-or-stop moments</span>
+            </div>
+          </div>
+
+          <section class="console-panel" aria-labelledby="analyzer-title">
+            <div class="panel-head">
+              <p class="eyebrow">live checker</p>
+              <h3 id="analyzer-title">Score your follow-up</h3>
+            </div>
+
+            <label class="field-label" for="draft-input">Paste the follow-up</label>
+            <textarea id="draft-input" spellcheck="false">No rush. Sharing the draft here in case it helps. Happy to leave it here if now is bad timing.</textarea>
+
+            <div class="control-grid">
+              <label class="range-field" for="hours-input">
+                <span>hours since your last outbound</span>
+                <input id="hours-input" type="range" min="0" max="168" step="1" value="52" />
+                <strong id="hours-value">52h</strong>
+              </label>
+              <label class="count-field" for="followups-input">
+                <span>follow-ups already sent</span>
+                <select id="followups-input">
+                  <option value="0">0</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3+</option>
+                </select>
+              </label>
+            </div>
+
+            <div class="action-row">
+              <button id="analyze-button" type="button">analyze follow-up</button>
+              <button id="clear-button" class="ghost-button" type="button">clear</button>
+            </div>
+
+            <div class="status-row">
+              <p id="window-chip" class="tone-chip">reasonable window</p>
+              <p id="counter-line" class="counter-line">16 words · 0 questions</p>
+            </div>
+
+            <div class="example-row" role="tablist" aria-label="double-text-risk examples">
+              <button type="button" class="example-pill active" data-example="measured">measured nudge</button>
+              <button type="button" class="example-pill" data-example="tooSoon">too soon</button>
+              <button type="button" class="example-pill" data-example="stacked">stacked pressure</button>
+            </div>
+
+            <section class="decision-panel" aria-live="polite">
+              <div class="panel-subhead">
+                <p class="eyebrow">next step</p>
+                <p id="decision-chip" class="decision-chip">send now</p>
+              </div>
+              <p id="decision-summary" class="decision-summary"></p>
+              <ul id="decision-reasons" class="decision-reasons"></ul>
+            </section>
+
+            <div class="meter-grid" id="meter-grid" aria-live="polite"></div>
+
+            <section class="suggestions-panel">
+              <div class="panel-subhead">
+                <p class="eyebrow">rewrite hints</p>
+                <a
+                  id="primary-upgrade-link"
+                  class="signal-link"
+                  href="https://tells.voiddo.com/deep-dive/?ref=double-text-risk-primary"
+                  >use the $19 Deep Dive</a
+                >
+              </div>
+              <ol id="hints-list"></ol>
+            </section>
+          </section>
+        </section>
+
+        <section class="examples-strip" aria-labelledby="evidence-title">
+          <div class="section-head">
+            <p class="eyebrow">what it scores</p>
+            <h3 id="evidence-title">Timing, pressure, value, and whether text is still the right channel</h3>
+          </div>
+          <div class="signal-grid">
+            <article class="signal-panel">
+              <p class="eyebrow">risk</p>
+              <h4>chance the follow-up reads weaker than useful</h4>
+              <p>High risk usually means you are asking for attention without enough new value or enough time gap.</p>
+            </article>
+            <article class="signal-panel">
+              <p class="eyebrow">timing</p>
+              <h4>whether the silence window justifies a new touch</h4>
+              <p>Sometimes the wording is fine and the problem is simply that it is too early.</p>
+            </article>
+            <article class="signal-panel">
+              <p class="eyebrow">channel shift</p>
+              <h4>whether another text is already the weaker move</h4>
+              <p>If enough time has passed, another text can be less credible than a clearer channel or a clean close.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="story-grid">
+          <article class="story-panel">
+            <p class="eyebrow">good use</p>
+            <h3>Use it when the draft is ready but the timing still feels unstable.</h3>
+            <p>
+              This is for client nudges, recruiter follow-ups, dating texts, and sales check-ins
+              where the real risk is not wording alone. It is whether you are sending one message too many.
+            </p>
+          </article>
+          <article class="story-panel">
+            <p class="eyebrow">bad use</p>
+            <h3>It will not tell you what the whole pattern means.</h3>
+            <p>
+              This page does not do deception detection, attachment theory, or relationship verdicts.
+              If the real issue is the full thread or the recurring person, the next step is <code>tells</code>.
+            </p>
+          </article>
+          <article class="story-panel">
+            <p class="eyebrow">privacy</p>
+            <h3>No stored drafts. No model calls. No login wall.</h3>
+            <p>
+              Everything runs in the page. Refresh and the text is gone. This is a quick private pass,
+              not a SaaS inbox.
+            </p>
+          </article>
+        </section>
+
+        <section class="cta-band">
+          <div>
+            <p class="eyebrow">next step</p>
+            <h3>When the problem stops being one text, stop using one-text tools.</h3>
+            <p>
+              <code>double-text-risk</code> is the narrow first pass. <code>tells</code> is the paid
+              step when one thread, one person, or one repeating dynamic keeps pulling you back in.
+            </p>
+          </div>
+          <div class="cta-actions">
+            <a class="primary-link" href="https://tells.voiddo.com/deep-dive/?ref=double-text-risk-bottom">deep dive · $19 once</a>
+            <a class="quiet-link" href="https://tells.voiddo.com/signal-toolkit/?ref=double-text-risk-toolkit">all free checks</a>
+            <a class="quiet-link" href="https://tells.voiddo.com/?ref=double-text-risk-starter">starter · $14.99/mo</a>
+            <a class="quiet-link" href="https://tells.voiddo.com/for-coaches/?ref=double-text-risk-practitioner">practitioner · $99.99/mo</a>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer-note">
+        Built by vøiddo — a small studio shipping AI-flavoured products, free dev tools, Chrome
+        extensions and weird browser games.
+      </footer>
+    </div>
+
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>

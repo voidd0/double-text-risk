@@ -1,11 +1,11 @@
 {
   "name": "@v0idd0/double-text-risk",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "double-text-risk — deterministic follow-up checker for dating, workplace, recruiter, client, support, family, and sales threads that scores whether another message adds value, should wait, switch channels, or stay unsent.",
   "type": "module",
   "main": "src/index.js",
   "bin": {
-    "double-text-risk": "./bin/double-text-risk.js"
+    "double-text-risk": "bin/double-text-risk.js"
   },
   "scripts": {
     "test": "node test.js",
@@ -97,5 +97,9 @@
   "funding": {
     "type": "individual",
     "url": "https://voiddo.com/contact/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/voidd0/double-text-risk.git"
   }
 }
